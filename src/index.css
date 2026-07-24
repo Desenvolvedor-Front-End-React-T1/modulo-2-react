@@ -116,3 +116,18 @@ code {
 .jornalismo {
   color: red;
 }
+
+.card-noticia {
+  background: rgb(63, 152, 63);
+  width: fit-content;
+  border-radius: 4px !important;  
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.card-noticia img {
+  border-radius: 4px !important;
+}
+.card-noticia h2{
+  color: white;
+}
