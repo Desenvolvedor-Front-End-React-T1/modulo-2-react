@@ -3,12 +3,23 @@ import CardEsporte from './components/CardEsporte'
 
 function App() {
 
+  const frutas = ["Maçã", "Banana", "Laranja"]
+
+  const logado = true
+
   return (
     <>
       <h1>App.jsx</h1>
 
+      {logado ? <p>Bem vindo!</p> : <p>Faça login</p>}
+
+      {frutas.map(fruta => (
+          <button key={fruta} className='button-fruit'>{fruta}</button>      
+      ))}
+     
+
       {/* Card Notícia */}
-      <div style={{ display: 'flex', flexDirection: 'column',gap: '14px'}}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '14px'}}>
 
         {/* Brasil x Itália */}
         <CardEsporte 
@@ -21,6 +32,8 @@ function App() {
           imagemNoticia={"https://s2-ge.glbimg.com/lLryxWN5YFhCQLeAGEQZgZGfzlU=/810x456/top/smart/https://i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2026/y/w/qpjD6yR0u3jVyFiXD0Fg/agif26072301462292.jpg"}
         />
       </div>
+
+
 
     </>
   )

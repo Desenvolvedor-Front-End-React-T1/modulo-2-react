@@ -131,3 +131,6 @@ code {
 .card-noticia h2{
   color: white;
 }
+
+/* tailwind */
+/* div id="card-noticia" className="flex column gap-4 rounded-lg text-white width-[fit-content] bg-[#valorEmHexadecimal]" */
