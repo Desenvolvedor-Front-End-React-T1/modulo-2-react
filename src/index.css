@@ -132,5 +132,15 @@ code {
   color: white;
 }
 
+.lista-tipos-noticia {
+  display: flex;
+  gap: 4px;
+}
+button.tipo-noticia {
+  width: 120px;
+  height: 32px;
+  border-radius: 6px;
+  border: none;
+}
 /* tailwind */
 /* div id="card-noticia" className="flex column gap-4 rounded-lg text-white width-[fit-content] bg-[#valorEmHexadecimal]" */
