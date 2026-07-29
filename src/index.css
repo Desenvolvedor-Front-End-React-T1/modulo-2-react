@@ -144,3 +144,11 @@ button.tipo-noticia {
 }
 /* tailwind */
 /* div id="card-noticia" className="flex column gap-4 rounded-lg text-white width-[fit-content] bg-[#valorEmHexadecimal]" */
+
+.bg-black {
+  background: black;
+}
+
+.color-white {
+  color: white;
+}
