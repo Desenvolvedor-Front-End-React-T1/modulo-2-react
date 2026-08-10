@@ -25,8 +25,7 @@ function InputsState() {
                 onChange={(e) => setEmail(e.target.value)}
             />
 
-            <select value={curso} onChange={(e) => setCurso(e.target.value)}
-            >
+            <select value={curso} onChange={(e) => setCurso(e.target.value)}>
                 <option value="">Selecione um curso</option>
                 <option value="react">React</option>
                 <option value="angular">Angular</option>

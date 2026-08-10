@@ -66,6 +66,12 @@ function App() {
 
        <button onClick={clicarBotao}>Clique aqui</button>
 
+
+       <h2>FORMULARIO DE LOGIN</h2>
+       ...
+
+       <h2>Lista de Tarefas</h2>
+
     </>
   )
 }

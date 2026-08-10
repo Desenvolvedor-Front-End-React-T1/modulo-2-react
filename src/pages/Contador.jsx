@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 function Contador() {
     // declaracao de estado:
@@ -8,6 +8,13 @@ function Contador() {
      * setContador(parametro)
      * parametro -> é o novo valor da variavel contador
      */
+
+    useEffect(() => {
+        console.log("O valor do contador mudou")
+        if (contador === 100) {
+            alert("O contador chegou a 100")
+        }
+    }, [contador])
 
     return (
         <>
