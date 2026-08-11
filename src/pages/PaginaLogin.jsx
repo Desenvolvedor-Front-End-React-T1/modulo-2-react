@@ -4,7 +4,6 @@ function PaginaLogin() {
 
     const [email, setEmail] = useState("")
     const [senha, setSenha] = useState("")
-
     function conectar() {
         alert(`${email} e ${senha}`)
     }

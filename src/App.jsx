@@ -31,7 +31,8 @@ function App() {
   function clicarBotao() {
     alert('houve um clique no botão')
   }
-  
+
+
   return (
     <>
       <h1>App.jsx</h1>

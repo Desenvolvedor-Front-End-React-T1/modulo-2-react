@@ -7,6 +7,8 @@ import InputsState from './pages/InputsState.jsx'
 import Contador from './pages/Contador.jsx'
 import PaginaLogin from './pages/PaginaLogin.jsx'
 import ListaTarefas from './pages/ListaTarefas.jsx'
+import Semana2 from './pages/Semana2.jsx'
+import Filmes from './pages/Filmes.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -15,6 +17,8 @@ createRoot(document.getElementById('root')).render(
     {/* <InputsState /> */}
     {/* <Contador /> */}
     {/* <PaginaLogin /> */}
-    <ListaTarefas />
+    {/* <ListaTarefas /> */}
+    {/* <Semana2 /> */}
+    <Filmes />
   </StrictMode>,
 )
