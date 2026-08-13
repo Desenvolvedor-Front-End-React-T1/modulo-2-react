@@ -20,7 +20,6 @@ function Mercado() {
 
         // só vai ser executado aqui quando o usuario digitar
         const consulta = lista.filter(item => item.produto.toLowerCase().includes(busca.toLowerCase()))
-
         setListaFiltrada(consulta)
     }, [busca])
 
@@ -33,8 +32,6 @@ function Mercado() {
                 type="text"
                 placeholder="Buscar produto..."
                 style={{ border: '1px solid black', margin: '10px', padding: '10px' }} />
-
-            <button onClick={consultar}>Pesquisar</button>
 
             <h2>Produtos Disponíveis:</h2>
             {listaFiltrada.map(item => (
