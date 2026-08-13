@@ -9,7 +9,7 @@ import PaginaLogin from './pages/PaginaLogin.jsx'
 import ListaTarefas from './pages/ListaTarefas.jsx'
 import Semana2 from './pages/Semana2.jsx'
 import Filmes from './pages/Filmes.jsx'
-
+import Mercado from './pages/Mercado.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     {/* <App /> */}
@@ -19,6 +19,7 @@ createRoot(document.getElementById('root')).render(
     {/* <PaginaLogin /> */}
     {/* <ListaTarefas /> */}
     {/* <Semana2 /> */}
-    <Filmes />
+    {/* <Filmes /> */}
+    <Mercado />
   </StrictMode>,
 )

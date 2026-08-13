@@ -3,7 +3,7 @@ import { useState, useEffect } from "react"
 function Contador() {
     // declaracao de estado:
     // const [variavel, funcaoParaMudarAVariavel] = useState()
-    const [contador, setContador] = useState(0)      
+    const [contador, setContador] = useState(0)  
     /**
      * setContador(parametro)
      * parametro -> é o novo valor da variavel contador
@@ -11,8 +11,8 @@ function Contador() {
 
     useEffect(() => {
         console.log("O valor do contador mudou")
-        if (contador === 100) {
-            alert("O contador chegou a 100")
+        if (contador === 10) {
+            alert("O contador chegou a 10")
         }
     }, [contador])
 
