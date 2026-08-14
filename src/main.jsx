@@ -10,6 +10,7 @@ import ListaTarefas from './pages/ListaTarefas.jsx'
 import Semana2 from './pages/Semana2.jsx'
 import Filmes from './pages/Filmes.jsx'
 import Mercado from './pages/Mercado.jsx'
+import ContatoBikcraft from './pages/ContatoBikcraft.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     {/* <App /> */}
@@ -20,6 +21,7 @@ createRoot(document.getElementById('root')).render(
     {/* <ListaTarefas /> */}
     {/* <Semana2 /> */}
     {/* <Filmes /> */}
-    <Mercado />
+    {/* <Mercado /> */}
+    <ContatoBikcraft />
   </StrictMode>,
 )

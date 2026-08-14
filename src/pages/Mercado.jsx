@@ -12,12 +12,9 @@ function Mercado() {
         { produto: 'Arroz', preco: 10 },
         { produto: 'Feijão', preco: 8 },
     ])
-
     const [listaFiltrada, setListaFiltrada] = useState(lista)
 
-
     useEffect(() => {
-
         // só vai ser executado aqui quando o usuario digitar
         const consulta = lista.filter(item => item.produto.toLowerCase().includes(busca.toLowerCase()))
         setListaFiltrada(consulta)
@@ -26,7 +23,6 @@ function Mercado() {
     return (
         <>
             <h1>Mercado</h1>
-
             <input value={busca}
                 onChange={(e) => setBusca(e.target.value)}
                 type="text"
