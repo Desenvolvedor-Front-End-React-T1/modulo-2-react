@@ -1,3 +1,142 @@
+/* ---------- Layout / navegação (React Router) ---------- */
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  text-align: left;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 16px 32px;
+  border-bottom: 1px solid var(--border);
+
+  @media (max-width: 1024px) {
+    padding: 12px 20px;
+  }
+}
+
+.topbar-logo {
+  font-family: var(--heading);
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text-h);
+  text-decoration: none;
+}
+
+.topbar-nav {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.topbar-nav a {
+  font-size: 15px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  color: var(--text);
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.topbar-nav a:hover {
+  color: var(--text-h);
+  background: var(--social-bg);
+}
+
+/* O NavLink adiciona a classe "active" no link da rota atual */
+.topbar-nav a.active {
+  color: var(--accent);
+  background: var(--accent-bg);
+}
+
+.conteudo {
+  flex-grow: 1;
+  padding: 8px 32px 48px;
+
+  @media (max-width: 1024px) {
+    padding: 8px 20px 32px;
+  }
+}
+
+/* ---------- Lista de exercícios (Home) ---------- */
+
+.home-intro {
+  margin-bottom: 40px;
+  max-width: 60ch;
+}
+
+.tema {
+  margin-bottom: 40px;
+}
+
+.tema h2 {
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.lista-exercicios {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.card-exercicio {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--text);
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+.card-exercicio:hover {
+  border-color: var(--accent-border);
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
+}
+
+.card-exercicio h3 {
+  margin: 0;
+  font-family: var(--heading);
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+.card-exercicio p {
+  font-size: 14px;
+  line-height: 140%;
+  flex-grow: 1;
+}
+
+.card-exercicio-rota {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--accent);
+}
+
+.botao-voltar {
+  display: inline-flex;
+  padding: 8px 16px;
+  margin-top: 24px;
+  border-radius: 6px;
+  color: var(--accent);
+  background: var(--accent-bg);
+  text-decoration: none;
+}
+
+/* ---------- Estilos originais do template ---------- */
+
 .counter {
   font-size: 16px;
   padding: 5px 10px;

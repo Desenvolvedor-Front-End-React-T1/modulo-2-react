@@ -1,27 +1,20 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import { BrowserRouter } from 'react-router-dom'
 import './index.css'
 import App from './App.jsx'
-import Aula from './pages/Aula.jsx'
-import InputsState from './pages/InputsState.jsx'
-import Contador from './pages/Contador.jsx'
-import PaginaLogin from './pages/PaginaLogin.jsx'
-import ListaTarefas from './pages/ListaTarefas.jsx'
-import Semana2 from './pages/Semana2.jsx'
-import Filmes from './pages/Filmes.jsx'
-import Mercado from './pages/Mercado.jsx'
-import ContatoBikcraft from './pages/ContatoBikcraft.jsx'
+
+/**
+ * O BrowserRouter é quem "liga" o React Router na aplicação:
+ * ele observa a URL do navegador e avisa as <Routes> do App.jsx.
+ *
+ * Antes trocávamos de página comentando/descomentando componentes aqui.
+ * Agora cada exercício tem seu próprio endereço (ex: /filmes).
+ */
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    {/* <App /> */}
-    {/* <Aula /> */}
-    {/* <InputsState /> */}
-    {/* <Contador /> */}
-    {/* <PaginaLogin /> */}
-    {/* <ListaTarefas /> */}
-    {/* <Semana2 /> */}
-    {/* <Filmes /> */}
-    {/* <Mercado /> */}
-    <ContatoBikcraft />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </StrictMode>,
 )

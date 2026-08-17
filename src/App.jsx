@@ -1,79 +1,79 @@
+import { Routes, Route } from 'react-router-dom'
 import './App.css'
-import CardEsporte from './components/CardEsporte'
 
+import Layout from './components/Layout'
+
+// Página inicial: só lista os exercícios e redireciona para eles
+import Home from './pages/Home'
+
+// Fundamentos
+import Aula from './pages/Aula'
+
+// Estado (useState)
+import Semana2 from './pages/Semana2'
+import Contador from './pages/Contador'
+import InputsState from './pages/InputsState'
+
+// Formulários
+import PaginaLogin from './pages/PaginaLogin'
+import ContatoBikcraft from './pages/ContatoBikcraft'
+import Contato from './pages/Contato'
+
+// Listas e Filtros
+import Filmes from './pages/Filmes'
+import Noticias from './pages/Noticias'
+import Mercado from './pages/Mercado'
+import ListaTarefas from './pages/ListaTarefas'
+
+import NaoEncontrada from './pages/NaoEncontrada'
+
+/**
+ * Aqui fica TODA a navegação do projeto.
+ *
+ * <Routes>  -> olha a URL atual e escolhe uma única <Route>
+ * <Route>   -> liga um endereço (path) a uma página (element)
+ *
+ * As rotas estão dentro de um <Route element={<Layout />}> para que
+ * todas compartilhem o mesmo menu do topo. O <Layout /> renderiza o
+ * <Outlet />, e é nele que a página escolhida aparece.
+ *
+ * Para criar um exercício novo:
+ * 1) crie o arquivo em src/pages/
+ * 2) importe ele aqui e adicione uma <Route> no tema certo
+ * 3) adicione o item em src/data/exercicios.js para virar card na Home
+ */
 function App() {
-
-  const tiposNoticia = ["Esporte", "Entretenimento", "Jornalismo"]
-  const noticias = [
-    {
-      id: 1,
-      titulo: 'Brasil x Itália na semi da Liga das Nações',
-      imagem: 'https://s2-home-globo.glbimg.com/mcnN4AOaenqqhb_pn4w_x4XWDa4=/0x46:1280x766/fit-in/629x354/middle/smart/filters:strip_icc():strip_exif()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2026/W/H/VzgiExTOSHtuobrkyM6A/brasilxjapao-vnl-4.jpg',
-      tipo: 'esporte'
-    },
-    {
-      id: 2,
-      titulo: 'Sem Pirlo, Leonardo e Maldini pedem para sair da Federação Italiana',
-      imagem: 'https://s2-home-globo.glbimg.com/VqLrKqfA-W2m9Xf7h3CbvzNF55w=/0x233:3840x2393/fit-in/629x354/middle/smart/filters:strip_icc():strip_exif()/i.s3.glbimg.com/v1/AUTH_da025474c0c44edd99332dddb09cabe8/internal_photos/bs/2026/p/K/BLi2knSlqtovOgmXhy1A/cv1-7644-z5gecxvq-20260723025429-jpeg.jpg',
-      tipo: 'esporte'
-    },
-    {
-      id: 3,
-      titulo: 'Entenda nova regra para evitar cera em lesões de goleiros que será testada no futebol inglês',
-      imagem: 'https://s2-home-globo.glbimg.com/PfDHXCrN6jPCgV8DTgWzsAZ1mko=/0x78:2795x1650/fit-in/629x354/middle/smart/filters:strip_icc():strip_exif()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2024/F/O/Mz0SacTuAHLgcrataq1w/gettyimages-2176917933.jpg',
-      tipo: 'esporte'
-    },
-  ]
-  // tiposNoticia.forEach(tipo => console.log(tipo))
-
-  const nome = ""
-
-  function clicarBotao() {
-    alert('houve um clique no botão')
-  }
-
-
   return (
-    <>
-      <h1>App.jsx</h1>
-      <h2>Quantidade de noticias: {noticias.length}</h2>
-      
-      <input placeholder='Digite seu nome' value={nome} />
+    <Routes>
+      <Route element={<Layout />}>
 
-      <div className='lista-tipos-noticia'>
-        {tiposNoticia.map(tipo => (
-          <button key={tipo} className='tipo-noticia'>{tipo}</button>
-        ))}
-      </div>
+        {/* Página inicial - lista de exercícios */}
+        <Route path="/" element={<Home />} />
 
-      <div className='lista-noticias'>
-        {noticias.map(noticia => (
-          <CardEsporte 
-              key={noticia.id}
-              tituloNoticia={noticia.titulo}
-              imagemNoticia={noticia.imagem}
-          />
-        ))}
+        {/* --- Fundamentos --- */}
+        <Route path="/aula" element={<Aula />} />
 
-        {/* Uso sem map (lista com laço de repetição para renderização) */}
-        {/* <CardEsporte
-          tituloNoticia="Brasil x Itália na semi da Liga das Nações"
-          imagemNoticia={"https://s2-home-globo.glbimg.com/mcnN4AOaenqqhb_pn4w_x4XWDa4=/0x46:1280x766/fit-in/629x354/middle/smart/filters:strip_icc():strip_exif()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2026/W/H/VzgiExTOSHtuobrkyM6A/brasilxjapao-vnl-4.jpg"}
-        /> */}
+        {/* --- Estado (useState) --- */}
+        <Route path="/semana2" element={<Semana2 />} />
+        <Route path="/contador" element={<Contador />} />
+        <Route path="/inputs-state" element={<InputsState />} />
 
-        {noticias.length === 0 && <p>Não existem notícias a serem exibidas</p>}              
-      </div>
+        {/* --- Formulários --- */}
+        <Route path="/login" element={<PaginaLogin />} />
+        <Route path="/contato-bikcraft" element={<ContatoBikcraft />} />
+        <Route path="/contato" element={<Contato />} />
 
+        {/* --- Listas e Filtros --- */}
+        <Route path="/filmes" element={<Filmes />} />
+        <Route path="/noticias" element={<Noticias />} />
+        <Route path="/mercado" element={<Mercado />} />
+        <Route path="/lista-tarefas" element={<ListaTarefas />} />
 
-       <button onClick={clicarBotao}>Clique aqui</button>
+        {/* Qualquer endereço que não existe */}
+        <Route path="*" element={<NaoEncontrada />} />
 
-
-       <h2>FORMULARIO DE LOGIN</h2>
-       ...
-
-       <h2>Lista de Tarefas</h2>
-
-    </>
+      </Route>
+    </Routes>
   )
 }
 
