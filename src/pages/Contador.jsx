@@ -4,6 +4,7 @@ function Contador() {
     // declaracao de estado:
     // const [variavel, funcaoParaMudarAVariavel] = useState()
     const [contador, setContador] = useState(0)  
+
     /**
      * setContador(parametro)
      * parametro -> é o novo valor da variavel contador
@@ -15,6 +16,13 @@ function Contador() {
             alert("O contador chegou a 10")
         }
     }, [contador])
+
+    useEffect(() => {
+        // Ele vai executar quando o componente for montado 
+    }, [])
+
+    useEffect(() => {
+    })
 
     return (
         <>
@@ -34,4 +42,4 @@ function Contador() {
     )
 }
 
-export default Contador
+export default Contador 

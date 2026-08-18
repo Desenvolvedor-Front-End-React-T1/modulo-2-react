@@ -1,0 +1,22 @@
+{
+    "noticias": [
+        {
+            "id": 1,
+            "titulo": "Brasil x Itália na semi da Liga das Nações",
+            "imagem": "",
+            "tipo": "esporte"
+        },
+        {
+            "id": 2,
+            "titulo": "Sem Pirlo, Leonardo e Maldini pedem para sair da Federação Italiana",
+            "imagem": "",
+            "tipo": "esporte"
+        },
+        {
+            "id": 3,
+            "titulo": "Entenda nova regra para evitar cera em lesões de goleiros que será testada no futebol inglês",
+            "imagem": "",
+            "tipo": "esporte"
+        }
+    ]
+}

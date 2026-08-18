@@ -26,6 +26,7 @@ import Mercado from './pages/Mercado'
 import ListaTarefas from './pages/ListaTarefas'
 
 import NaoEncontrada from './pages/NaoEncontrada'
+import ChamadaApi from './pages/ChamadaApi'
 
 /**
  * Aqui fica TODA a navegação do projeto.
@@ -68,6 +69,8 @@ function App() {
         <Route path="/noticias" element={<Noticias />} />
         <Route path="/mercado" element={<Mercado />} />
         <Route path="/lista-tarefas" element={<ListaTarefas />} />
+
+        <Route path="/chamada-api" element={<ChamadaApi />} />
 
         {/* Qualquer endereço que não existe */}
         <Route path="*" element={<NaoEncontrada />} />
