@@ -90,6 +90,12 @@ const exercicios = [
         descricao: 'Adicionar tarefas sem usar .push (spread operator) e os três tipos de useEffect.',
         tema: 'Listas e Filtros',
     },
+    {
+        rota: '/chamada-api',
+        titulo: 'Chamada de API',
+        descricao: 'Utiliza useState, useEffect, .map e fetch para simular uma chamada de API com json-server',
+        tema: 'Listas e Filtros',
+    },
 ]
 
 export default exercicios
