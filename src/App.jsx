@@ -18,6 +18,7 @@ import InputsState from './pages/InputsState'
 import PaginaLogin from './pages/PaginaLogin'
 import ContatoBikcraft from './pages/ContatoBikcraft'
 import Contato from './pages/Contato'
+import ReactHookForm from './pages/ReactHookForm'
 
 // Listas e Filtros
 import Filmes from './pages/Filmes'
@@ -27,6 +28,7 @@ import ListaTarefas from './pages/ListaTarefas'
 
 import NaoEncontrada from './pages/NaoEncontrada'
 import ChamadaApi from './pages/ChamadaApi'
+import ReactHookFormComValidacao from './pages/ReactHookFormComValidacao'
 
 /**
  * Aqui fica TODA a navegação do projeto.
@@ -63,7 +65,8 @@ function App() {
         <Route path="/login" element={<PaginaLogin />} />
         <Route path="/contato-bikcraft" element={<ContatoBikcraft />} />
         <Route path="/contato" element={<Contato />} />
-
+        <Route path="/react-hook-form" element={<ReactHookForm />} />
+        <Route path="/react-hook-form-com-validacao" element={<ReactHookFormComValidacao />} />
         {/* --- Listas e Filtros --- */}
         <Route path="/filmes" element={<Filmes />} />
         <Route path="/noticias" element={<Noticias />} />

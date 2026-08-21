@@ -65,6 +65,20 @@ const exercicios = [
         tema: 'Formulários',
     },
 
+    // Libs
+    {
+        rota: '/react-hook-form',
+        titulo: 'React Hook Form (Inicial)',
+        descricao: 'Uso da lib React Hook Form para facilitar construção de formulários com react.',
+        tema: 'Formulários',
+    },
+        {
+        rota: '/react-hook-form-com-validacao',
+        titulo: 'React Hook Form com Validação',
+        descricao: 'Uso da lib React Hook Form com validação de erros.',
+        tema: 'Formulários',
+    },
+
     // --- Listas e Filtros ---
     {
         rota: '/filmes',
